@@ -1,0 +1,246 @@
+/* Global Styles */
+:root {
+  --primary: #0e7490;
+  --primary-dark: #0c637a;
+  --primary-light: #e0f2fe;
+  --secondary: #6c757d;
+  --dark: #343a40;
+  --light: #f8f9fa;
+  --success: #28a745;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --info: #17a2b8;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.section-title {
+  position: relative;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary);
+}
+
+.text-center .section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+/* Hero Sections */
+.hero-section,
+.about-hero-section,
+.contact-hero-section {
+  height: 600px;
+  background-image: url('https://placehold.co/1200x600');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.about-hero-section,
+.contact-hero-section {
+  height: 400px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.solidbackgrounds.com/images/1200x600/1200x600-gray-solid-color-background.jpg');
+}
+
+/* Search Box */
+.search-box {
+  max-width: 900px;
+}
+
+/* Hotel Cards */
+.hotel-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  overflow: hidden;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.bg-primary-subtle {
+  background-color: rgba(14, 116, 144, 0.1);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+/* Benefit Cards */
+.benefit-card {
+  background-color: #fff;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.icon-wrapper {
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+/* Feature Cards */
+.feature-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Team Cards */
+.team-img-wrapper {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.team-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Contact Page */
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--light);
+  color: var(--dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.map-container {
+  height: 400px;
+  overflow: hidden;
+}
+
+.map-placeholder {
+  height: 100%;
+  background-color: #e9ecef;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Footer */
+footer a:hover {
+  color: white !important;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 500px;
+  }
+
+  .about-hero-section,
+  .contact-hero-section {
+    height: 300px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    height: 400px;
+  }
+
+  .about-hero-section,
+  .contact-hero-section {
+    height: 250px;
+  }
+}
+.text-muted {
+  color: white !important;
+}
+
+.text-muted-black {
+  color: black !important;
+}
